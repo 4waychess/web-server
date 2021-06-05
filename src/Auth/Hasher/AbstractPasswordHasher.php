@@ -16,7 +16,7 @@ use RuntimeException;
  */
 abstract class AbstractPasswordHasher implements ArrayAccess
 {
-    abstract public function compute(string $password): string|false;
+    abstract public function compute(string $password): ?string|false;
     abstract public function verify(string $password, string $hash): bool;
     abstract public function needsRehash(string $hash): bool;
 

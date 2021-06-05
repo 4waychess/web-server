@@ -16,6 +16,8 @@ use RuntimeException;
 
 /**
  * The abstract password hasher.
+ *
+ * @psalm-suppress MixedArgument
  */
 abstract class AbstractPasswordHasher implements ArrayAccess
 {

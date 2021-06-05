@@ -1,8 +1,11 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 /**
  * The adless and forever free 4 player chess server.
  *
  * @license <https://github.com/4waychess/web-server/blob/master/license>.
+ *
  * @link    <https://github.com/4waychess/web-server>.
  */
 
@@ -17,7 +20,9 @@ use RuntimeException;
 abstract class AbstractPasswordHasher implements ArrayAccess
 {
     abstract public function compute(string $password): ?string;
+
     abstract public function verify(string $password, string $hash): bool;
+
     abstract public function needsRehash(string $hash): bool;
 
     /**

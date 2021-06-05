@@ -16,9 +16,9 @@ use RuntimeException;
  */
 abstract class AbstractPasswordHasher implements ArrayAccess
 {
-    abstract public function compute();
-    abstract public function verify();
-    abstract public function needsRehash();
+    abstract public function compute(): string|false;
+    abstract public function verify(): bool;
+    abstract public function needsRehash(): bool;
 
     /**
      * Type-Hints are not needed for this method.

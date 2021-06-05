@@ -1,4 +1,7 @@
 {
+    "name": "fourwaychess/web-server",
+    "description": "The adless and forever free 4 player chess server.",
+    "keywords": [],
     "require": {
         "hybridauth/hybridauth": "^3.7",
         "paragonie/halite": "^4.8",
@@ -26,9 +29,13 @@
         "symfony/translation": "^5.3",
         "symfony/validator": "^5.3"
     },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
     "config": {
         "optimize-autoloader": true,
         "sort-packages": true
-    }
+    },
+    "prefer-stable": true
 }
 

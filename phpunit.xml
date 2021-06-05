@@ -6,6 +6,7 @@
     </include>
     <exclude>
       <directory>./vendor</directory>
+      <directory>./config</directory>
       <directory>./build</directory>
       <directory>./tests</directory>
       <directory>./public</directory>

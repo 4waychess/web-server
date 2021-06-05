@@ -1,6 +1,7 @@
 # Four Way Chess Web Server
 [![CI](https://github.com/4waychess/web-server/actions/workflows/php.yml/badge.svg)](https://github.com/4waychess/web-server/actions/workflows/php.yml)
 [![Psalm](https://github.com/4waychess/web-server/actions/workflows/pslam.yml/badge.svg)](https://github.com/4waychess/web-server/actions/workflows/pslam.yml)
+[![StyleCI](https://github.styleci.io/repos/374023749/shield?branch=main)]
 ## Security Vulnerabilities
 > DO NOT PUBLICLY SUBMIT SECURITY RELATED ISSUES!
 

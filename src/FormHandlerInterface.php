@@ -12,7 +12,6 @@ declare(strict_types=1);
 namespace FourWayChess;
 
 use Symfony\Component\Form\FormFactoryInterface;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 /**
  * Add the form handler interface.
@@ -22,11 +21,9 @@ interface FormHandlerInterface
     /**
      * Construct a new form handler.
      *
-     * @param \Symfony\Component\HttpFoundation\Session\SessionInterface The session handler.
-     *
      * @return void Returns nothing.
      */
-    public function __construct(SessionInterface $session);
+    public function __construct();
 
     /**
      * Get the form handler.

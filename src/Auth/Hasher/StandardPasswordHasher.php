@@ -13,6 +13,11 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
  * The password hasher.
+ *
+ * @psalm-suppress ReservedWord
+ * @psalm-suppress MixedArgument
+ * @psalm-suppress InvalidNullableReturnType
+ * @psalm-suppress NullableReturnStatement
  */
 final class StandardPasswordHasher extends AbstractPasswordHasher implements PasswordHasherInterface
 {

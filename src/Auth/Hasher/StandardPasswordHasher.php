@@ -41,7 +41,7 @@ final class StandardPasswordHasher extends AbstractPasswordHasher implements Pas
      *
      * @param string $password The password to hash.
      *
-     * @return string Returns the hashed password.
+     * @return ?string Returns the hashed password.
      */
     public function compute(string $password): ?string
     {

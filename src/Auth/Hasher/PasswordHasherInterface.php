@@ -17,7 +17,7 @@ namespace FourWayChess\Auth\Hasher;
 interface PasswordHasherInterface
 {
     /**
-     * Compute the user's passwod hash.
+     * Compute the user's password hash.
      *
      * @param string $password The user's password.
      *

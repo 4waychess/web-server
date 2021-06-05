@@ -1,8 +1,11 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 /**
  * The adless and forever free 4 player chess server.
  *
  * @license <https://github.com/4waychess/web-server/blob/master/license>.
+ *
  * @link    <https://github.com/4waychess/web-server>.
  */
 
@@ -18,7 +21,7 @@ interface PasswordHasherInterface
      *
      * @param string $password The user's password.
      *
-     * @return ?string Returns the hashed password, or false on failure. 
+     * @return ?string Returns the hashed password, or false on failure.
      */
     public function compute(string $password): ?string;
 
@@ -28,7 +31,7 @@ interface PasswordHasherInterface
      * @param string $password The user's password.
      * @param string $hash     A hash created by self::compute().
      *
-     * @return bool Returns true if the password and hash match, or false otherwise. 
+     * @return bool Returns true if the password and hash match, or false otherwise.
      */
     public function verify(string $password, string $hash): bool;
 
@@ -38,7 +41,7 @@ interface PasswordHasherInterface
      * @param string $hash A hash created by self::compute().
      *
      * @return bool Returns true if the hash should be rehashed to match the current
-     *              hasher algo and options, or false otherwise. 
+     *              hasher algo and options, or false otherwise.
      */
     public function needsRehash(string $hash): bool;
 }

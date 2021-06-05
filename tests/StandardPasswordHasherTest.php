@@ -1,16 +1,19 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 /**
  * The adless and forever free 4 player chess server.
  *
  * @license <https://github.com/4waychess/web-server/blob/master/license>.
+ *
  * @link    <https://github.com/4waychess/web-server>.
  */
 
 namespace FourWayChess\Tests;
 
+use FourWayChess\Auth\Hasher\StandardPasswordHasher as PasswordHasher;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
-use FourWayChess\Auth\Hasher\StandardPasswordHasher as PasswordHasher;
 
 /**
  * Test the standard password hasher.

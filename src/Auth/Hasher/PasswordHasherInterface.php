@@ -18,7 +18,7 @@ interface PasswordHasherInterface
      *
      * @param string $password The user's password.
      *
-     * @return string|false Returns the hashed password, or false on failure. 
+     * @return ?string Returns the hashed password, or false on failure. 
      */
     public function compute(string $password): ?string;
 

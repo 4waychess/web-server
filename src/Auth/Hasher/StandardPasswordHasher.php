@@ -43,7 +43,7 @@ final class StandardPasswordHasher extends AbstractPasswordHasher implements Pas
      *
      * @return string Returns the hashed password.
      */
-    public function compute(string $password): string|false
+    public function compute(string $password): ?string|false
     {
         if ($this->isPasswordTooLong($password)) {
             throw new InvalidArgumentException('The password supplied is too long.');

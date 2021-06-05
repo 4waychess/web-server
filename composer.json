@@ -1,6 +1,7 @@
 {
     "name": "fourwaychess/web-server",
     "description": "The adless and forever free 4 player chess server.",
+    "license": "GPL-3.0-or-later"
     "keywords": [],
     "require": {
         "hybridauth/hybridauth": "^3.7",

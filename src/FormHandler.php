@@ -16,10 +16,9 @@ use Symfony\Component\Form\Extension\HttpFoundation\HttpFoundationExtension;
 use Symfony\Component\Form\Extension\Validator\ValidatorExtension;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\Form\Forms;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Security\Csrf\CsrfTokenManager;
 use Symfony\Component\Security\Csrf\TokenGenerator\UriSafeTokenGenerator;
-use Symfony\Component\Security\Csrf\TokenStorage\SessionTokenStorage;
+use Symfony\Component\Security\Csrf\TokenStorage\NativeSessionTokenStorage;
 use Symfony\Component\Validator\Validation;
 
 /**
@@ -33,15 +32,13 @@ class FormHandler implements FormHandlerInterface
     /**
      * Construct a new form handler.
      *
-     * @param \Symfony\Component\HttpFoundation\Session\SessionInterface The session handler.
-     *
      * @return void Returns nothing.
      */
-    public function __construct(SessionInterface $session)
+    public function __construct()
     {
         $validator = Validation::createValidator();
         $csrfGenerator = new UriSafeTokenGenerator();
-        $csrfStorage = new SessionTokenStorage($session);
+        $csrfStorage = new NativeSessionTokenStorage();
         $csrfManager = new CsrfTokenManager($csrfGenerator, $csrfStorage);
         $this->formFactory = Forms::createFormFactoryBuilder()
             ->addExtension(new HttpFoundationExtension())

@@ -13,11 +13,6 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
  * The password hasher.
- *
- * @psalm-suppress ReservedWord
- * @psalm-suppress MixedArgument
- * @psalm-suppress InvalidNullableReturnType
- * @psalm-suppress NullableReturnStatement
  */
 final class StandardPasswordHasher extends AbstractPasswordHasher implements PasswordHasherInterface
 {
@@ -29,12 +24,12 @@ final class StandardPasswordHasher extends AbstractPasswordHasher implements Pas
     /**
      * Construct a new password hasher.
      *
-     * @param int|null|string $passwordAlgo The password hasher algorithm to use.
+     * @param int|string $passwordAlgo The password hasher algorithm to use.
      * @param array           $options      The password hasher options.
      *
      * @return void Returns nothing.
      */
-    public function __construct(public int|null|string $passwordAlgo, array $options = [])
+    public function __construct(public int|string $passwordAlgo, array $options = [])
     {
         $resolver = new OptionsResolver();
         $this->configureOptions($resolver);
@@ -46,7 +41,7 @@ final class StandardPasswordHasher extends AbstractPasswordHasher implements Pas
      *
      * @param string $password The password to hash.
      *
-     * @return ?string Returns the hashed password.
+     * @return null|string Returns the hashed password.
      */
     public function compute(string $password): ?string
     {

@@ -20,7 +20,7 @@ interface PasswordHasherInterface
      *
      * @return string|false Returns the hashed password, or false on failure. 
      */
-    public function compute(string $password): ?string|false;
+    public function compute(string $password): ?string;
 
     /**
      * Verifies that a password matches a hash.

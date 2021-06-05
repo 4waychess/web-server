@@ -2,7 +2,7 @@
 [![CI](https://github.com/4waychess/web-server/actions/workflows/php.yml/badge.svg)](https://github.com/4waychess/web-server/actions/workflows/php.yml)
 [![Psalm](https://github.com/4waychess/web-server/actions/workflows/pslam.yml/badge.svg)](https://github.com/4waychess/web-server/actions/workflows/pslam.yml)
 ## Security Vulnerabilities
-If you discover a security vulnerability within this Four Way Chess, please send an e-mail to Nicholas English via [omatamix@gmail.com](mailto:omatamix@gmail.com). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within Four Way Chess, please send an e-mail to Nicholas English via [omatamix@gmail.com](mailto:omatamix@gmail.com). All security vulnerabilities will be promptly addressed.
 ## Contributing
 All contributions are welcome! If you wish to contribute.
 ## License

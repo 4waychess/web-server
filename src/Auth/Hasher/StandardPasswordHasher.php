@@ -1,8 +1,11 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 /**
  * The adless and forever free 4 player chess server.
  *
  * @license <https://github.com/4waychess/web-server/blob/master/license>.
+ *
  * @link    <https://github.com/4waychess/web-server>.
  */
 
@@ -18,18 +21,18 @@ final class StandardPasswordHasher extends AbstractPasswordHasher implements Pas
 {
     use PasswordLengthChecker;
 
-    /** @var array $options The password hasher options. */
+    /** @var array The password hasher options. */
     private array $options = [];
 
     /**
      * Construct a new password hasher.
      *
      * @param int|string $passwordAlgo The password hasher algorithm to use.
-     * @param array           $options      The password hasher options.
+     * @param array      $options      The password hasher options.
      *
      * @return void Returns nothing.
      */
-    public function __construct(public int|string $passwordAlgo, array $options = [])
+    public function __construct(public int | string $passwordAlgo, array $options = [])
     {
         $resolver = new OptionsResolver();
         $this->configureOptions($resolver);
@@ -48,6 +51,7 @@ final class StandardPasswordHasher extends AbstractPasswordHasher implements Pas
         if ($this->isPasswordTooLong($password)) {
             throw new InvalidArgumentException('The password supplied is too long.');
         }
+
         return password_hash($password, $this->passwordAlgo, $this->options);
     }
 

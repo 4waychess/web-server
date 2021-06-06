@@ -11,6 +11,8 @@ declare(strict_types=1);
 
 namespace FourWayChess\Auth\Handler;
 
+use Symfony\Component\HttpFoundation\Response;
+
 /**
  * The handler interface.
  */
